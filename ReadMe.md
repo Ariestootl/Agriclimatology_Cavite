@@ -37,9 +37,7 @@ Instead of relying on isolated municipal models, this study trains a **Unified M
 To replicate this environment and run the predictive models locally, ensure you have Python 3.8+ installed, then install the required dependencies:
 
 ```bash
-git clone https://github.com/Ariestootl/machine_learning.git
-cd machine_learning/Agriclimatology/Cavite
-pip install -r requirements.txt
+git clone https://github.com/Ariestootl/Agriclimatology_Cavite.git
 ```
 *(Core dependencies include: `scikit-learn`, `pandas`, `shap`, `PyALE`, `matplotlib`)*
 
