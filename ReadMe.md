@@ -31,6 +31,7 @@ Instead of relying on isolated municipal models, this study trains a **Unified M
 ├── cavite_weather_master_reshaped.csv # Processed dataset formatted for Random Forest
 ├── nasa-power-parameters.csv          # Metadata and definitions for NASA POWER features
 └── ReadMe.md                          # Project documentation and methodology
+```
 
 ## 🚀 Getting Started
 To replicate this environment and run the predictive models locally, ensure you have Python 3.8+ installed, then install the required dependencies:
