@@ -8,9 +8,14 @@
 
 ## 👥 About the Researchers
 This research proposal is being developed by:
+
+**Student Researchers:**
 *   **Elle Rheign Maxeen P. Padilla**
 *   **Judiel Kyle I. Ladero**
 *   **Bianca Rheizel T. Abelieto**
+
+**Qualified Scientist & Technical Adviser:**
+*   **Jose Aries E. De Los Santos**
 
 *The team operates under my technical guidance as their qualified scientist.* To ensure the students build a robust foundational skillset in computational science, **I, Jose Aries E. De Los Santos, provide hands-on mentorship in Python programming and applied machine learning**. This includes teaching the students how to code in Python, utilize standard libraries like Scikit-learn, and implement Explainable AI (XAI) tools.
 
