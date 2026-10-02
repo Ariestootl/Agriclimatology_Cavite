@@ -52,32 +52,7 @@ Agricultural disaster resilience requires moving beyond descriptive monitoring t
 └── ReadMe.md                          # Project documentation and methodology
 ``` -->
 
-## ⚙️ Mathematical & Algorithmic Formulation
 
-### 1. Non-Parametric Risk Scoring ($R_i$)
-Hydrometeorological variables during dry seasons exhibit non-Gaussian behavior and temporal skewness. To prevent sporadic rain showers from distorting baseline priorities, municipal risk coefficients ($R_i$) are calculated using the empirical **10th percentile** of root-zone moisture during the critical February–May dry season:
-
-$$Q_q(1 - X) = 1 - Q_{1 - q}(X) \implies R_i = Q_{0.90}(R_i) = 1 - Q_{0.10}(\widehat{\text{GWETROOT}}_i)$$
-
-This conservative formulation anchors the LP objective function directly to acute, peak drought vulnerability rather than smoothed seasonal averages.
-
-### 2. Canonical Linear Program for LDRRMF Allocation
-The optimal municipal preparedness allocation vector $\mathbf{x}^* \in \mathbb{R}^{23}$ maximizes the province-wide risk-weighted preparedness return:
-
-$$\max_{\mathbf{x}} \; Z = \sum_{i=1}^{n} R_i x_i$$
-
-subject to:
-
-$$
-\begin{aligned}
-\sum_{i=1}^{n} x_i &\le B && \text{(Total Preparedness Budget: 0.70 of LDRRMF, RA 10121)} \\
-\sum_{i \in \mathcal{U}} x_i &\ge 0.60 B && \text{(Zonal Upland Agricultural Priority: } \text{)} \\
-x_i &\ge L_i && \text{(Universal Operational Baseline Floor: PHP 400,000)} \\
-x_i &\le U_i && \text{(Anti-Monopoly Absorption Ceiling: 0.15 of } B \text{)}
-\end{aligned}
-$$
-
----
 
 ## 🚀 Getting Started
 To replicate this environment and run the predictive models locally, ensure you have Python 3.8+ installed, then install the required dependencies:
@@ -121,6 +96,32 @@ Meteorological features (such as temperature and solar radiation) are often high
 ### 3. Local Explainability via SHAP (Municipal Case Studies)
 Using SHAP Waterfall plots, XAI breaks down individual predictions for specific municipalities on a month-by-month basis. If the model predicts a severe drought risk for a specific town, XAI provides an exact "receipt" of that decision.
 *   *Example:* Rather than simply stating, "Town A is at High Risk," XAI clarifies, "Town A is at High Risk primarily due to a 20% deficit in precipitation combined with abnormally high surface solar radiation, despite cooler-than-average temperatures."
+
+## ⚙️ Mathematical & Algorithmic Formulation of Resource Allocation
+
+### 1. Non-Parametric Risk Scoring ($R_i$)
+Hydrometeorological variables during dry seasons exhibit non-Gaussian behavior and temporal skewness. To prevent sporadic rain showers from distorting baseline priorities, municipal risk coefficients ($R_i$) are calculated using the empirical **10th percentile** of root-zone moisture during the critical February–May dry season:
+
+$$Q_q(1 - X) = 1 - Q_{1 - q}(X) \implies R_i = Q_{0.90}(R_i) = 1 - Q_{0.10}(\widehat{\text{GWETROOT}}_i)$$
+
+This conservative formulation anchors the LP objective function directly to acute, peak drought vulnerability rather than smoothed seasonal averages.
+
+### 2. Canonical Linear Program for LDRRMF Allocation
+The optimal municipal preparedness allocation vector $\mathbf{x}^* \in \mathbb{R}^{23}$ maximizes the province-wide risk-weighted preparedness return:
+
+$$\max_{\mathbf{x}} \; Z = \sum_{i=1}^{n} R_i x_i$$
+
+subject to:
+
+$$
+\begin{aligned}
+\sum_{i=1}^{n} x_i &\le B && \text{(Total Preparedness Budget: 0.70 of LDRRMF, RA 10121)} \\
+\sum_{i \in \mathcal{U}} x_i &\ge 0.60 B && \text{(Zonal Upland Agricultural Priority: } \text{)} \\
+x_i &\ge L_i && \text{(Universal Operational Baseline Floor: PHP 400,000)} \\
+x_i &\le U_i && \text{(Anti-Monopoly Absorption Ceiling: 0.15 of } B \text{)}
+\end{aligned}
+$$
+
 
 ## 🎯 Research Impact
 By combining a robust predictive algorithm with the transparency of Explainable AI, this research provides agricultural stakeholders with an early-warning system that is not only mathematically sound but physically interpretable, actionable, and trustworthy.
