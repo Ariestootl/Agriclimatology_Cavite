@@ -69,7 +69,12 @@ $$\max_{\mathbf{x}} \; Z = \sum_{i=1}^{n} R_i x_i$$
 subject to:
 
 $$
-\begin{aligned} \sum_{i=1}^{n} x_i &\le B && \text{(Total Preparedness Budget: 70\% of LDRRMF, RA 10121)} \\ \sum_{i \in \mathcal{U}} x_i &\ge \alpha B && \text{(Zonal Upland Agricultural Priority: } \alpha = 60\% \text{)} \\ x_i &\ge L_i && \text{(Universal Operational Baseline Floor: PHP 400,000)} \\ x_i &\le U_i && \text{(Anti-Monopoly Absorption Ceiling: 15\% of } B \text{)} \end{aligned}
+\begin{aligned}
+\sum_{i=1}^{n} x_i &\le B && \text{(Total Preparedness Budget: 70\% of LDRRMF, RA 10121)} \\
+\sum_{i \in \mathcal{U}} x_i &\ge \alpha B && \text{(Zonal Upland Agricultural Priority: } \alpha = 60\% \text{)} \\
+x_i &\ge L_i && \text{(Universal Operational Baseline Floor: PHP 400,000)} \\
+x_i &\le U_i && \text{(Anti-Monopoly Absorption Ceiling: 15\% of } B \text{)}
+\end{aligned}
 $$
 
 ---
