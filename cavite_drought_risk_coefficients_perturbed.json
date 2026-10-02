@@ -3,161 +3,161 @@
         "Municipality":"Alfonso",
         "LAT":14.14,
         "LON":120.85,
-        "mean_gwetroot_pred":0.5381894841,
-        "risk_score":0.4618105159
+        "gwetroot_pred":0.4733085714,
+        "risk_score":0.5266914286
     },
     {
         "Municipality":"Amadeo",
         "LAT":14.17,
         "LON":120.92,
-        "mean_gwetroot_pred":0.5381894841,
-        "risk_score":0.4618105159
+        "gwetroot_pred":0.4733085714,
+        "risk_score":0.5266914286
     },
     {
         "Municipality":"Bacoor City",
         "LAT":14.46,
         "LON":120.94,
-        "mean_gwetroot_pred":0.6647448413,
-        "risk_score":0.3352551587
+        "gwetroot_pred":0.5839657143,
+        "risk_score":0.4160342857
     },
     {
         "Municipality":"Carmona",
         "LAT":14.31,
         "LON":121.05,
-        "mean_gwetroot_pred":0.6719005952,
-        "risk_score":0.3280994048
+        "gwetroot_pred":0.58954,
+        "risk_score":0.41046
     },
     {
         "Municipality":"Cavite City",
         "LAT":14.48,
         "LON":120.9,
-        "mean_gwetroot_pred":0.6101140873,
-        "risk_score":0.3898859127
+        "gwetroot_pred":0.5806114286,
+        "risk_score":0.4193885714
     },
     {
         "Municipality":"Dasmarinas City",
         "LAT":14.33,
         "LON":120.93,
-        "mean_gwetroot_pred":0.6101140873,
-        "risk_score":0.3898859127
+        "gwetroot_pred":0.5806114286,
+        "risk_score":0.4193885714
     },
     {
         "Municipality":"General Emilio Aguinaldo",
         "LAT":14.18,
         "LON":120.79,
-        "mean_gwetroot_pred":0.5381894841,
-        "risk_score":0.4618105159
+        "gwetroot_pred":0.4733085714,
+        "risk_score":0.5266914286
     },
     {
         "Municipality":"General Mariano Alvarez",
         "LAT":14.3,
         "LON":121.0,
-        "mean_gwetroot_pred":0.6719005952,
-        "risk_score":0.3280994048
+        "gwetroot_pred":0.58954,
+        "risk_score":0.41046
     },
     {
         "Municipality":"General Trias",
         "LAT":14.38,
         "LON":120.88,
-        "mean_gwetroot_pred":0.6101140873,
-        "risk_score":0.3898859127
+        "gwetroot_pred":0.5806114286,
+        "risk_score":0.4193885714
     },
     {
         "Municipality":"Imus City",
         "LAT":14.43,
         "LON":120.93,
-        "mean_gwetroot_pred":0.6101140873,
-        "risk_score":0.3898859127
+        "gwetroot_pred":0.5806114286,
+        "risk_score":0.4193885714
     },
     {
         "Municipality":"Indang",
         "LAT":14.19,
         "LON":120.87,
-        "mean_gwetroot_pred":0.5381894841,
-        "risk_score":0.4618105159
+        "gwetroot_pred":0.4733085714,
+        "risk_score":0.5266914286
     },
     {
         "Municipality":"Kawit",
         "LAT":14.44,
         "LON":120.9,
-        "mean_gwetroot_pred":0.6101140873,
-        "risk_score":0.3898859127
+        "gwetroot_pred":0.5806114286,
+        "risk_score":0.4193885714
     },
     {
         "Municipality":"Magallanes",
         "LAT":14.19,
         "LON":120.73,
-        "mean_gwetroot_pred":0.5381894841,
-        "risk_score":0.4618105159
+        "gwetroot_pred":0.4733085714,
+        "risk_score":0.5266914286
     },
     {
         "Municipality":"Maragondon",
         "LAT":14.27,
         "LON":120.73,
-        "mean_gwetroot_pred":0.6101140873,
-        "risk_score":0.3898859127
+        "gwetroot_pred":0.5806114286,
+        "risk_score":0.4193885714
     },
     {
         "Municipality":"Mendez",
         "LAT":14.13,
         "LON":120.9,
-        "mean_gwetroot_pred":0.5381894841,
-        "risk_score":0.4618105159
+        "gwetroot_pred":0.4733085714,
+        "risk_score":0.5266914286
     },
     {
         "Municipality":"Naic",
         "LAT":14.32,
         "LON":120.77,
-        "mean_gwetroot_pred":0.6101140873,
-        "risk_score":0.3898859127
+        "gwetroot_pred":0.5806114286,
+        "risk_score":0.4193885714
     },
     {
         "Municipality":"Noveleta",
         "LAT":14.43,
         "LON":120.88,
-        "mean_gwetroot_pred":0.6101140873,
-        "risk_score":0.3898859127
+        "gwetroot_pred":0.5806114286,
+        "risk_score":0.4193885714
     },
     {
         "Municipality":"Rosario",
         "LAT":14.41,
         "LON":120.85,
-        "mean_gwetroot_pred":0.6101140873,
-        "risk_score":0.3898859127
+        "gwetroot_pred":0.5806114286,
+        "risk_score":0.4193885714
     },
     {
         "Municipality":"Silang",
         "LAT":14.23,
         "LON":120.97,
-        "mean_gwetroot_pred":0.6660799603,
-        "risk_score":0.3339200397
+        "gwetroot_pred":0.5722314286,
+        "risk_score":0.4277685714
     },
     {
         "Municipality":"Tagaytay City",
         "LAT":14.11,
         "LON":120.96,
-        "mean_gwetroot_pred":0.6660799603,
-        "risk_score":0.3339200397
+        "gwetroot_pred":0.5722314286,
+        "risk_score":0.4277685714
     },
     {
         "Municipality":"Tanza",
         "LAT":14.36,
         "LON":120.85,
-        "mean_gwetroot_pred":0.6101140873,
-        "risk_score":0.3898859127
+        "gwetroot_pred":0.5806114286,
+        "risk_score":0.4193885714
     },
     {
         "Municipality":"Ternate",
         "LAT":14.28,
         "LON":120.7,
-        "mean_gwetroot_pred":0.6101140873,
-        "risk_score":0.3898859127
+        "gwetroot_pred":0.5806114286,
+        "risk_score":0.4193885714
     },
     {
         "Municipality":"Trece Martires City",
         "LAT":14.28,
         "LON":120.86,
-        "mean_gwetroot_pred":0.6101140873,
-        "risk_score":0.3898859127
+        "gwetroot_pred":0.5806114286,
+        "risk_score":0.4193885714
     }
 ]

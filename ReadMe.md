@@ -17,16 +17,30 @@ This research proposal is being developed by:
 **Qualified Scientist & Technical Adviser:**
 *   **Jose Aries E. De Los Santos**
 
-*The team operates under my technical guidance as their qualified scientist.* To ensure the students build a robust foundational skillset in computational science, **I, Jose Aries E. De Los Santos, provide hands-on mentorship in Python programming and applied machine learning**. This includes teaching the students how to code in Python, utilize standard libraries like Scikit-learn, and implement Explainable AI (XAI) tools.
+*The team operates under my technical guidance as their qualified scientist.* To ensure the students build a robust foundational skillset in computational science, **I, Jose Aries E. De Los Santos, provide hands-on mentorship in Python programming and applied machine learning**. This includes teaching the students how to code in Python, utilize standard libraries like Scikit-learn, implement Explainable AI (XAI) tools and mathematical optimization (Linear Programming via SciPy/HiGHS).
 
-Through live coding demonstrations, step-by-step guidance on running predictive models, and rigorous validation of their output code, I am equipping these students to address real-world agricultural problems through advanced computational methods—bridging the gap between data science and actionable local governance.
+Through live coding demonstrations, step-by-step guidance on running predictive models, and rigorous validation of their output code, I am equipping these students to address real-world agricultural problems through advanced computational methods—bridging the gap between data science, operations research, and actionable local governance.
 
 ## 🌾 Project Overview
-Agricultural resilience relies heavily on accurate, timely, and understandable climate forecasting. This project utilizes meteorological data (harvested via the NASA POWER API) to predict root-zone soil moisture depletion—a primary indicator of agricultural drought. 
+Agricultural disaster resilience requires moving beyond descriptive monitoring to prescriptive intervention. While traditional warning systems issue passive vulnerability indices, this project introduces an end-to-end **Predict-and-Optimize (P&O)** computational decision-support framework:
 
-Instead of relying on isolated municipal models, this study trains a **Unified Machine Learning Model (Random Forest)** across multiple municipalities. This approach allows the algorithm to learn macro-level climatological patterns (e.g., monsoon cycles, humidity thresholds, and solar radiation impacts) while maintaining the ability to output highly accurate, localized municipal predictions.
+1. **Predictive Stage (Machine Learning):** A unified Random Forest regressor predicts root-zone soil wetness ($\widehat{\text{GWETROOT}}$) across all 23 local government units (LGUs) in Cavite using multi-year NASA POWER climatological data.
+2. **Interpretability Stage (Explainable AI):** Global (SHAP, ALE) and local (SHAP Waterfall) diagnostics validate physical consistency against meteorological laws and isolate non-linear dry-season thresholds.
+3. **Prescriptive Stage (Operations Research):** A statutory Linear Programming (LP) model translates non-parametric drought tail risks into an optimal, audit-compliant allocation of the Local Disaster Risk Reduction and Management Fund (LDRRMF) under **Republic Act No. 10121**.
 
-## 🗂️ Repository Structure
+[ NASA POWER Data ]
+│
+▼
+[ Random Forest Regressor ] ──► [ XAI: SHAP & ALE Diagnostics ]
+│
+▼
+[ Non-Parametric Tail-Risk Aggregation: Q_0.90(R) = 1 - Q_0.10(GWETROOT) ]
+│
+▼
+[ Linear Programming Resource Allocation (RA 10121 Mandate) ]
+│
+
+<!-- ## 🗂️ Repository Structure
 ```text
 ├── Bacoor/                            # Municipal case study and local explainability (SHAP/ALE)
 ├── Silang/                            # Municipal case study and local explainability (SHAP/ALE)
@@ -36,7 +50,27 @@ Instead of relying on isolated municipal models, this study trains a **Unified M
 ├── cavite_weather_master_reshaped.csv # Processed dataset formatted for Random Forest
 ├── nasa-power-parameters.csv          # Metadata and definitions for NASA POWER features
 └── ReadMe.md                          # Project documentation and methodology
-```
+``` -->
+
+## ⚙️ Mathematical & Algorithmic Formulation
+
+### 1. Non-Parametric Risk Scoring ($R_i$)
+Hydrometeorological variables during dry seasons exhibit non-Gaussian behavior and temporal skewness. To prevent sporadic rain showers from distorting baseline priorities, municipal risk coefficients ($R_i$) are calculated using the empirical **10th percentile** of root-zone moisture during the critical February–May dry season:
+
+$$Q_q(1 - X) = 1 - Q_{1 - q}(X) \implies R_i = Q_{0.90}(R_i) = 1 - Q_{0.10}(\widehat{\text{GWETROOT}}_i)$$
+
+This conservative formulation anchors the LP objective function directly to acute, peak drought vulnerability rather than smoothed seasonal averages.
+
+### 2. Canonical Linear Program for LDRRMF Allocation
+The optimal municipal preparedness allocation vector $\mathbf{x}^* \in \mathbb{R}^{23}$ maximizes the province-wide risk-weighted preparedness return:
+
+$$\max_{\mathbf{x}} \; Z = \sum_{i=1}^{n} R_i x_i$$
+
+subject to:
+
+$$\begin{aligned} \sum_{i=1}^{n} x_i &\le B && \text{(Total Preparedness Budget: 70\% of LDRRMF, RA 10121)} \\ \sum_{i \in \mathcal{U}} x_i &\ge \alpha B && \text{(Zonal Upland Agricultural Priority: } \alpha = 60\% \text{)} \\ x_i &\ge L_i && \text{(Universal Operational Baseline Floor: PHP 400,000)} \\ x_i &\le U_i && \text{(Anti-Monopoly Absorption Ceiling: 15\% of } B \text{)} \end{aligned}$$
+
+---
 
 ## 🚀 Getting Started
 To replicate this environment and run the predictive models locally, ensure you have Python 3.8+ installed, then install the required dependencies:
