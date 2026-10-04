@@ -100,7 +100,7 @@ Using SHAP Waterfall plots, XAI breaks down individual predictions for specific 
 ## ⚙️ Mathematical & Algorithmic Formulation of Resource Allocation
 
 ### 1. Non-Parametric Risk Scoring ($R_i$)
-Hydrometeorological variables during dry seasons exhibit non-Gaussian behavior and temporal skewness. To prevent sporadic rain showers from distorting baseline priorities, municipal risk coefficients ($R_i$) are calculated using the empirical **10th percentile** of root-zone moisture during the critical February–May dry season:
+Agroclimatology variables during dry seasons exhibit non-Gaussian behavior and temporal skewness. To prevent sporadic rain showers from distorting baseline priorities, municipal risk coefficients ($R_i$) are calculated using the empirical **10th percentile** of root-zone moisture during the critical dry season:
 
 $$Q_q(1 - X) = 1 - Q_{1 - q}(X) \implies R_i = Q_{0.90}(R_i) = 1 - Q_{0.10}(\widehat{\text{GWETROOT}}_i)$$
 
